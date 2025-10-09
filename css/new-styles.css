@@ -16,7 +16,7 @@
 }
 @media (max-width: 491px) {
   .bg-primary {
-    background-position: 70%;
+    background-position: 65%;
     background-position-y: 80%;
   }
 }
@@ -61,15 +61,26 @@
     margin: 0;
     padding: 0;
   }
+
   .social-icon-new {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin: 10px;
+    border-radius: 50%;
     &:hover {
       color: var(--rosa-vivido) !important;
     }
   }
+
   .ul-social-icon{
     margin-left: 2.5vw;
+  }
+  @media (max-width: 491px) {
+    .ul-social-icon {
+      width: fit-content;
+      border-radius: 15px;
+      padding-bottom: 1px;
+      background-color: #fdd900;
+    }
   }
 
 .tooltip-inner {
@@ -96,13 +107,11 @@
 
 
 
-
-
 /*
   Agenda
 */
 #agenda {
-  width: 100vw;
+  width: 95vw;
 }
 .loading-message, .error-message {
   font-size: 1.2rem;

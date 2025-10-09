@@ -40,5 +40,5 @@ Este projeto está licenciado sob a **MIT License**, permitindo uso, cópia e mo
 ---
 
 <!--
-📱 Projeto: Ivangélica Site Oficial
+:iphone: Projeto: Ivangélica Site Oficial
 Commit: 1a Versão Oficial

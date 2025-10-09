@@ -4,7 +4,7 @@ $(function () {
 });
 
 // Agenda
-$(document).ready(function() {
+$(document).ready(function () {
   const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRmYuJS3ywz9EvH1IhAn-AoyOxRch9ZovA2ZB1fGbTmMbpQmYwrubyIj359zDJXeYc7Etbw_00gqGcP/pub?gid=0&single=true&output=csv';
   const agendaContainer = $('#agenda-container');
   const agendaTitle = $('#agenda-title');
@@ -15,7 +15,7 @@ $(document).ready(function() {
   Papa.parse(GOOGLE_SHEET_CSV_URL, {
     download: true,
     header: true,
-    complete: function(results) {
+    complete: function (results) {
       const links = results.data.filter(item => item.link && item.texto); // Filtra linhas vazias
 
       if (links.length === 0) {
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
       agendaContainer.empty(); // Limpa a mensagem de "carregando"
 
-      links.forEach(function(item) {
+      links.forEach(function (item) {
         // Cria a estrutura do card para cada evento
         const cardHtml = `
           <div class="col-lg-4 col-md-6 mb-4">
@@ -43,7 +43,7 @@ $(document).ready(function() {
         agendaContainer.append(cardHtml);
       });
     },
-    error: function(err) {
+    error: function (err) {
       console.error("Erro ao buscar dados:", err);
       agendaContainer.html('<div class="col-12 text-center"><p class="error-message">Erro ao carregar a agenda. Tente novamente mais tarde.</p></div>');
     }
