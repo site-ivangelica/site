@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+:root {
+  --amarelo-principal: #fdd900;
+  --rosa-vivido: #ff238b;
+  --verde-agua: #6cbab0;
+  --branco: #ffffff;
+  --branco-transparente: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 991px) {
+  .bg-primary {
+    background-position: 50%;
+  }
+}
+@media (max-width: 491px) {
+  .bg-primary {
+    background-position: 70%;
+    background-position-y: 80%;
+  }
+}
+  .section-hero-new{
+    height: 100vh;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    &:hover {
+      color: var(--rosa-vivido);
+      text-decoration: underline;
+      transition: 0.5s all ease-in-out;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .navbar-toggler-icon {
+    color: var(--rosa-vivido) !important;
+  }
+  .navigation button {
+    border: 3px solid var(--branco-transparente) !important;
+  }
+
+  .main-title-new {
+    font-family: "Caprasimo", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #ffffff;
+    margin-left: -5vw;
+    padding: 0;
+  }
+
+  .sub-title-new {
+    font-family: "DynaPuff", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--rosa-vivido) !important;
+    margin: 0;
+    padding: 0;
+  }
+  .social-icon-new {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 10px;
+    &:hover {
+      color: var(--rosa-vivido) !important;
+    }
+  }
+  .ul-social-icon{
+    margin-left: 2.5vw;
+  }
+
+.tooltip-inner {
+  background-color: var(--rosa-vivido);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  opacity: 1 !important;
+}
+
+.bs-tooltip-right {
+  margin-left: 8px;
+}
+
+.bs-tooltip-right .arrow::before {
+  border-right-color: var(--rosa-vivido) !important;
+}
+
+.bs-tooltip-left .arrow::before {
+  border-left-color: var(--rosa-vivido) !important;
+}
+
+
+
+
+
+/*
+  Agenda
+*/
+#agenda {
+  width: 100vw;
+}
+.loading-message, .error-message {
+  font-size: 1.2rem;
+  color: #555;
+  padding: 40px 0;
+}
+#agenda-title {
+  font-family: "DynaPuff", system-ui;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.agenda-card {
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.agenda-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.agenda-card-link {
+  text-decoration: none;
+}
+
+.agenda-card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.agenda-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.agenda-card .card-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+}
+/* / Agenda*/
+
+/* Footer */
+.igorlazzaretti {
+  color: var(--verde-agua) !important;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: var(--rosa-vivido) !important;
+    text-decoration: underline;
+  }
+  &:active {
+    color: var(--amarelo-principal) !important;
+  }
+}
+/* /Footer */

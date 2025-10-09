@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ivangélica: Ela tem o tino pra homem bem sucedido!</title>
+  <!-- Desenvolvido por: igorlazzaretti.com -->
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/new-styles.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <!-- navigation -->
+  <header class="navigation fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#agenda">Agenda de Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://linktr.ee/ivangelica__">Linktree</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- hero area -->
+  <section class="hero-area bg-primary section-hero-new" id="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-11 mx-auto">
+          <h1 class="text-white font-tertiary main-title-new"> <br>Ivangélica</h1>
+          <h2 class="text-white sub-title-new"> <br>Ela tem o Tino</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer" id="l2">
+      <img src="images/illustrations/dots-cyan.png" alt="bg-shape">
+    </div>
+    <div class="layer" id="l3">
+      <img src="images/illustrations/star-1.png" id="s-l3" alt="bg-shape">
+    </div>
+    <div class="layer" id="l4">
+      <img src="images/illustrations/dots-orange.png" alt="bg-shape">
+    </div>
+    <div class="layer" id="l5">
+      <img src="images/illustrations/star-2.png" id="s-l5" alt="bg-shape">
+    </div>
+    <div class="layer" id="l6">
+      <img src="images/illustrations/star-2.png" id="s-l6" alt="bg-shape">
+    </div>
+    <div class="layer" id="l7">
+      <img src="images/illustrations/dots-group-orange.png" alt="bg-shape">
+    </div>
+    <div class="layer" id="l8">
+      <img src="images/illustrations/star-5.png" id="s-l8" alt="bg-shape">
+    </div>
+    <div class="layer" id="l9">
+      <img src="images/illustrations/star-3.png" id="s-l9" alt="bg-shape">
+    </div>
+    <!-- social icon -->
+    <ul class="list-unstyled mt-3 position-relative zindex-1 ul-social-icon">
+      <li class="mb-3"><a target="_blank" class="text-white social-icon-new"
+          href="https://www.instagram.com/ivangelica__/" data-toggle="tooltip" data-placement="right"
+          title="Instagram"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li class="mb-3"><a target="_blank" class="text-white social-icon-new"
+          href="https://open.spotify.com/playlist/1PWRnfBXCWJbzqy4xNS8h9?si=u0rVj6_oQ1OLSj05O7GMqw&pi=LeBgYjCiQdeiM"
+          data-toggle="tooltip" data-placement="right" title="Playlist: Ela tem o Tino"><i
+            class="fab fa-spotify"></i></a>
+      </li>
+      <li class="mb-3" title="Ir para o TikTok"><a target="_blank" class="text-white social-icon-new" href="#"><i
+            class="fab fa-tiktok" data-toggle="tooltip" data-placement="right" title="Tiktok"></i></a>
+      </li>
+      <li class="mb-3"><a class="text-white social-icon-new" href="mailto:ivangelicacomedy@gmail.com"
+          data-toggle="tooltip" data-placement="right" title="Envie um e-mail"><i class="fas fa-envelope"></i></a>
+      </li>
+    </ul>
+    <!-- /social icon -->
+  </section>
+  <!-- /hero area -->
+
+  <!-- agenda -->
+  <section id="agenda" class="section position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title" id="agenda-title">Agenda de Shows</h2>
+        </div>
+        <!-- A agenda será carregada dinamicamente aqui -->
+        <div id="agenda-container" class="row"></div>
+      </div>
+    </div>
+    <!-- bg image -->
+    <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image">
+  </section>
+  <!-- /agenda -->
+
+  <!-- footer -->
+  <footer class="bg-dark footer-section">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="text-light">Onde você</h5>
+            <p class="text-white paragraph-lg font-secondary">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSelKt1rP_a5mOsnrX0_ZiwtpU0ztNCQtv4N7_W9BtLrp8phSA/viewform?usp=preview"
+                target="_blank" class="text-white">quer meu show?</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-light">Instagram</h5>
+            <p class="text-white paragraph-lg font-secondary">
+              <a href="https://www.instagram.com/ivangelica__/" target="_blank" class="text-white">Acesse Aqui</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-light">Email</h5>
+            <p class="text-white paragraph-lg font-secondary">
+              <a href="mailto:ivangelicacomedy@gmail.com" class="text-white">ivangelicacomedy@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-top text-center border-dark py-5">
+      <p class="mb-0 text-light">Direitos Reservados ©
+        <script>
+          var CurrentYear = new Date().getFullYear()
+          document.write(CurrentYear)
+        </script> Desenvolvido com ❤️ por um fã <a target="_blank" href="https://igorlazzaretti.com"
+          class="igorlazzaretti">Igor Lazzaretti</a>
+        <br> Ainda em construção 👷🚧
+      </p>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- filter -->
+  <script src="plugins/shuffle/shuffle.min.js"></script>
+  <!-- Papa Parse -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <script src="js/new-script.js"></script>
+
+</body>
+
+</html>
