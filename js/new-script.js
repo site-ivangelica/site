@@ -21,16 +21,16 @@ $(document).ready(function() {
 
   // Define as imagens para a página inicial
   setRandomBackground('bg-index', [
-    '../images/backgrounds/bg1.png',
-    '../images/backgrounds/bg2.png',
-    '../images/backgrounds/bg3.png'
+    'images/backgrounds/bg1.png',
+    'images/backgrounds/bg2.png',
+    'images/backgrounds/bg3.png'
   ]);
 
   // Define as imagens para a página de contato
   setRandomBackground('bg-contato', [
-    '../images/backgrounds/bg1-contact.png',
-    '../images/backgrounds/bg2-contact.png',
-    '../images/backgrounds/bg3-contact.png'
+    'images/backgrounds/bg1-contact.png',
+    'images/backgrounds/bg2-contact.png',
+    'images/backgrounds/bg3-contact.png'
   ]);
 });
 
