@@ -67,6 +67,9 @@ $(document).ready(function () {
                 <div class="card-body">
                   <p class="card-text">${item.texto}</p>
                 </div>
+                <div class="card-adquira">
+                  <div class ="card-adquira-text">Adquira seu Ingresso</div>
+                </div>
               </div>
             </a>
           </div>
