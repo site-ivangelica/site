@@ -3,6 +3,37 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
+// --- Backgrounds Aleatórios ---
+$(document).ready(function() {
+  /**
+   * Define uma imagem de fundo aleatória para um elemento.
+   * @param {string} elementId - O ID do elemento alvo.
+   * @param {string[]} images - Um array com os caminhos das imagens.
+   */
+  function setRandomBackground(elementId, images) {
+    const element = document.getElementById(elementId);
+    if (element && images.length > 0) {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const selectedImage = images[randomIndex];
+      element.style.backgroundImage = `url(${selectedImage})`;
+    }
+  }
+
+  // Define as imagens para a página inicial
+  setRandomBackground('bg-index', [
+    '../images/backgrounds/bg1.png',
+    '../images/backgrounds/bg2.png',
+    '../images/backgrounds/bg3.png'
+  ]);
+
+  // Define as imagens para a página de contato
+  setRandomBackground('bg-contato', [
+    '../images/backgrounds/bg1-contact.png',
+    '../images/backgrounds/bg2-contact.png',
+    '../images/backgrounds/bg3-contact.png'
+  ]);
+});
+
 // Agenda
 $(document).ready(function () {
   const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRmYuJS3ywz9EvH1IhAn-AoyOxRch9ZovA2ZB1fGbTmMbpQmYwrubyIj359zDJXeYc7Etbw_00gqGcP/pub?gid=0&single=true&output=csv';
@@ -10,7 +41,7 @@ $(document).ready(function () {
   const agendaTitle = $('#agenda-title');
 
   // Mensagem de carregamento
-  agendaContainer.html('<div class="col-12 mt-5 text-center"><p class="loading-message"> Ligando o raio do Tinder... 📱 Carregando a agenda de eventos... 📅</p></div>');
+  agendaContainer.html('<div class="col-12 mt-5 text-center"><p class="loading-message"> ▪️ Ligando o raio do Tinder... 📱 </p></div>');
 
   Papa.parse(GOOGLE_SHEET_CSV_URL, {
     download: true,
@@ -45,7 +76,54 @@ $(document).ready(function () {
     },
     error: function (err) {
       console.error("Erro ao buscar dados:", err);
-      agendaContainer.html('<div class="col-12 text-center"><p class="error-message">Erro ao carregar a agenda. Tente novamente mais tarde.</p></div>');
+      agendaContainer.html('<div class="col-12 text-center"><p class="error-message">Hoje o Tinder ta fraco 😓 <br> Erro ao carregar a agenda. Tente novamente. 🔃</p></div>');
     }
   });
 });
+
+// Função que faz o colapso do menu ao clicar em um link
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+// Rolagem suave para a seção Agenda com deslocamento
+$('a[href="#agenda"]').on('click', function(event) {
+  // Previne o comportamento padrão do link
+  event.preventDefault();
+
+  var target = $('#agenda');
+  if (target.length) {
+    var headerHeight = $('.navigation').outerHeight();
+    var offset = headerHeight + 0; // 30px de espaço extra
+
+    // Anima a rolagem
+    $('html, body').animate({
+      scrollTop: target.offset().top - offset
+    }, 800); // 800ms de duração para a animação
+  }
+});
+
+// Função para copiar e-mail
+function handleCopyEmail(event) {
+  event.preventDefault();
+  const email = 'ivangelicacomedy@gmail.com';
+  const copyButton = $(this);
+
+  navigator.clipboard.writeText(email).then(function() {
+    // Sucesso ao copiar
+    const originalTitle = copyButton.attr('data-original-title');
+    copyButton.attr('data-original-title', 'Copiado! ✅').tooltip('show');
+
+    // Volta ao texto original depois de 2 segundos
+    setTimeout(function() {
+      copyButton.attr('data-original-title', originalTitle).tooltip('hide');
+    }, 2000);
+  }, function(err) {
+    // Erro ao copiar
+    console.error('Erro ao copiar e-mail: ', err);
+    copyButton.attr('data-original-title', 'Erro ao copiar').tooltip('show');
+  });
+}
+
+$('#copy-email-btn-index').on('click', handleCopyEmail);
+$('#copy-email-btn-contact').on('click', handleCopyEmail);
