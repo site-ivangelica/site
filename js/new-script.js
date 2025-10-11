@@ -1,3 +1,12 @@
+// --- Preloader ---
+$(window).on('load', function() {
+  const preloader = $('#preloader');
+  if (preloader.length) {
+    preloader.fadeOut(500, function() {
+      $(this).remove(); // Remove o elemento da DOM após o fadeOut
+    });
+  }
+});
 // Ativa tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -66,6 +75,9 @@ $(document).ready(function () {
                 <img src="${item.imagem}" class="card-img-top" alt="Imagem do Evento ${item.texto}">
                 <div class="card-body">
                   <p class="card-text">${item.texto}</p>
+                </div>
+                <div class="card-adquira">
+                  <div class ="card-adquira-text">Adquira seu Ingresso</div>
                 </div>
               </div>
             </a>

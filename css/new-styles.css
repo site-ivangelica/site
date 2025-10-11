@@ -10,6 +10,30 @@
   --branco-transparente: rgba(255, 255, 255, 0.5);
   --transparente: 0, 0, 0, 0;
 }
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--rosa-vivido); /* Cor de fundo do preloader */
+  z-index: 9999; /* Garante que fique sobre todo o conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out;
+}
+
+.loader {
+  border: 8px solid var(--branco-transparente);
+  border-top: 8px solid var(--amarelo-principal);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
 @media (max-width: 991px) {
   .bg-primary {
     background-position: 50%;
@@ -20,6 +44,11 @@
     background-position: 65%;
     background-position-y: 80%;
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
   .section-hero-new{
@@ -35,6 +64,11 @@
     background-color: var(--rosa-vivido) !important;
     padding-top: 10px;
     transition: 0.5s all ease-in-out;
+  }
+  .nav-bg-clear nav div ul li a{
+    &:hover {
+      color: #fdd900 !important;
+    }
   }
 
   /* Estilo para os elementos do parallax */
@@ -237,6 +271,37 @@
   font-weight: 500;
   margin: 0;
 }
+.card-adquira {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(253, 217, 0, 0.9); /* Amarelo principal com transparência */
+  color: var(--rosa-vivido);
+  padding: 5px;
+  text-align:center;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  font-family: "DynaPuff", system-ui;
+  font-size: 1rem;
+  font-weight: 500;
+  height: fit-content;
+}
+.agenda-card:hover .card-adquira {
+  opacity: 1;
+}
+@media (max-width: 991px){
+
+  .card-adquira {
+    opacity: 1;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  .card-adquira-text {
+  }
+}
+
 /* / Agenda*/
 
 /* Footer */
