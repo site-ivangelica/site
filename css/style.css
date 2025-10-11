@@ -17,6 +17,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c;
+  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 p, .paragraph {
@@ -466,6 +468,7 @@ textarea.form-control {
 .hero-area {
   padding: 260px 0 200px;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -521,10 +524,10 @@ textarea.form-control {
 
 #l5 {
   top: 80px;
-  right: -150px;
+  right: 0;
 }
 #s-l5 {
-  width: 20vw;
+  width: 5vw;
 }
 
 #l6 {
@@ -879,6 +882,7 @@ blockquote {
 
 .page-title {
   padding: 250px 0 150px;
+  overflow: hidden;
 }
 
 .page-title .container {
