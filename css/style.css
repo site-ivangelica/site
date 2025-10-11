@@ -246,8 +246,18 @@ a:hover {
 }
 
 .bg-primary {
-  background-image: none, url("../images/backgrounds/bg1.png");
-  background-size: cover;}
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-secondary {
+  background-size: cover;
+  background-position: center;
+  background-position-x: 55%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
 .bg-gray {
   background: #eaeaea !important;
@@ -539,7 +549,7 @@ textarea.form-control {
 }
 
 #l9 {
-  bottom: 100px;
+  bottom: -60px;
   right: -10px;
 }
 #s-l9 {
