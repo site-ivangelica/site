@@ -1,3 +1,12 @@
+// --- Preloader ---
+$(window).on('load', function() {
+  const preloader = $('#preloader');
+  if (preloader.length) {
+    preloader.fadeOut(500, function() {
+      $(this).remove(); // Remove o elemento da DOM após o fadeOut
+    });
+  }
+});
 // Ativa tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()

@@ -10,6 +10,30 @@
   --branco-transparente: rgba(255, 255, 255, 0.5);
   --transparente: 0, 0, 0, 0;
 }
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--rosa-vivido); /* Cor de fundo do preloader */
+  z-index: 9999; /* Garante que fique sobre todo o conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out;
+}
+
+.loader {
+  border: 8px solid var(--branco-transparente);
+  border-top: 8px solid var(--amarelo-principal);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
 @media (max-width: 991px) {
   .bg-primary {
     background-position: 50%;
@@ -20,6 +44,11 @@
     background-position: 65%;
     background-position-y: 80%;
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
   .section-hero-new{
