@@ -205,8 +205,8 @@
   Agenda
 */
 #agenda {
-  width: 100vw;
   padding: 5px;
+  overflow-x: hidden;
 }
 #agenda-contact {
   padding-top: 20vw;
