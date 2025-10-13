@@ -124,10 +124,10 @@
 
   .ul-social-icon{
     margin-left: 2.5vw;
+    top: -12vw
   }
   .ul-social-icon-contact{
-    margin-left: 90vw;
-    margin-top: clamp(5vw,12vw,18vw) !important;
+    top:1vw;
   }
   @media (max-width: 991px) {
     .ul-social-icon-contact{
@@ -136,7 +136,7 @@
   }
   .ul-social-icon-contact{
     margin-left: 90vw;
-    margin-top: clamp(3vw,3vw,18vw) !important;
+    top: 3vw !important;
   }
   @media (max-width: 491px) {
     .ul-social-icon {
