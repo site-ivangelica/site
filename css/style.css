@@ -536,6 +536,11 @@ textarea.form-control {
 }
 #s-l6 {
   width: clamp(300px, 16vw, 25vw);
+  top: 70vw;
+}
+#s-l6c {
+  left: -14vw !important;
+  top: 4vw !important;
 }
 
 #l7 {
@@ -556,7 +561,8 @@ textarea.form-control {
   right: -10px;
 }
 #s-l9 {
-  width: 20vw;
+  width: 1px;
+  margin-right: 10vw !important;
 }
 
 .layer-bg {
