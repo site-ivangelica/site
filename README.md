@@ -41,4 +41,4 @@ Este projeto está licenciado sob a **MIT License**, permitindo uso, cópia e mo
 
 <!--
 :iphone: Projeto: Ivangélica Site Oficial
-Commit: Images/Agenda/2025
+Commit: OG tags
