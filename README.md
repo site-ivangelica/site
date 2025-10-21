@@ -41,4 +41,4 @@ Este projeto está licenciado sob a **MIT License**, permitindo uso, cópia e mo
 
 <!--
 :iphone: Projeto: Ivangélica Site Oficial
-Commit: Icon e SEO
+Commit: Main Icon
