@@ -74,7 +74,7 @@ $(document).ready(function () {
               <div class="card agenda-card">
                 <img src="${item.imagem}" class="card-img-top" alt="Imagem do Evento ${item.texto}">
                 <div class="card-body">
-                  <p class="card-text">${item.texto}</p>
+                  <p class="card-text font-calsans-footer">${item.texto}</p>
                 </div>
                 <div class="card-adquira">
                   <div class ="card-adquira-text">Adquira seu Ingresso</div>
